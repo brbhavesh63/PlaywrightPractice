@@ -21,3 +21,4 @@ def test_UIValidationDynamicScript(playwright,page:Page):
     page.get_by_text("Checkout").click()
     expect(page.locator(".media-body")).to_have_count(2)
     time.sleep(2)
+
