@@ -42,3 +42,10 @@ def test_OpenFireFox(playwright:Playwright):
     page = context.new_page()
     page.goto("https://www.google.com")
 
+def test_PracticeLocators1(playwright):
+    browser = playwright.chromium.launch(headless=False)
+    context = browser.new_context()
+    page = context.new_page()
+    page.goto("https://demoqa.com/automation-practice-form")
+    page.locator("#firstName").fill("Bhavesh")
+
