@@ -14,7 +14,7 @@ def test_webTables(playwright : Playwright):
         page.get_by_role("link",name="Top Deals").click()
         deal_page = page_info.value
     totalNoofColumn = deal_page.locator("th").count()
-
+    mypriceColumn = 0
     for i in range(totalNoofColumn):
         priceColumn  = deal_page.locator("th").nth(i).filter(has_text="Price").count()
         if priceColumn > 0:
